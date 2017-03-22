@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title>
+      <ion-icon name="ionic"></ion-icon> IONIC 2 <small>SWIPED 4 TAB</small></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding has-bouncing="false">
+  <ion-segment color="dark">
+    <ion-segment-button style="border:none;" (click)="select(0)" [ngClass]="{SKactiveSegment: selected===0}">
+      contact:1/4
+    </ion-segment-button>
+    <ion-segment-button style="border:none;" (click)="select(1)" [ngClass]="{SKactiveSegment: selected===1}">
+      contact:2/4
+    </ion-segment-button>
+    <ion-segment-button style="border:none;" (click)="select(2)" [ngClass]="{SKactiveSegment: selected===2}">
+      contact:3/4
+    </ion-segment-button>
+    <ion-segment-button style="border:none;" (click)="select(3)" [ngClass]="{SKactiveSegment: selected===3}">
+      contact:4/4
+    </ion-segment-button>
+  </ion-segment>
+  <div id='indicatorFor4' class="indicatorSegment">
+
+  </div>
+  <ion-slides #mySlider (ionDrag)="onSlideChanged($event)" [options]="mySlideOptions2">
+    <ion-slide>
+      <h1>cont:1/4</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>cont:2/4</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>cont:3/4</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>cont:4/4</h1>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
